@@ -11,7 +11,7 @@ RUN apt-get update -y && apt-get install -y libzbar-dev bash gcc git libc-dev cu
 RUN apt-get update && apt-get install -y default-jdk maven
 
 ADD . /opt/project
-#RUN cd /opt/project && ./gradlew clean build
+RUN cd /opt/project && ./gradlew clean build
 
 WORKDIR /opt/project
 
